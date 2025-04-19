@@ -1,0 +1,270 @@
+.patient-signup-container{
+    width: 100%;
+
+    z-index: 0;
+
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 60px;
+    margin-bottom: 70px;
+} 
+
+.popup{   
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 66px;
+    left: 0;
+    right: 0;
+    z-index: 50; 
+
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(7, 61, 7);
+
+    background-color: rgb(177, 246, 182);
+
+    padding: 12px 25px;
+    margin-bottom: 20px; 
+} 
+
+
+.user-type-message{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.user-type-message p{
+    font-size: 20px;
+    color: var(--primary-font);
+
+    margin-bottom: 6px;
+}
+
+
+
+.signup-forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form1,
+.signup-form2,
+.signup-form3,
+.signup-form4{
+    width: 340px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    background-color: rgba(120, 192, 224, 0.354);;
+    box-shadow: 9px 9px 11px rgba(0, 0, 0, 0.181);
+
+    border: 1px solid var(--primary-font);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    padding: 20px 20px; 
+    margin-bottom: 55px;
+}
+
+.signup-form2,
+.signup-form3,
+.signup-form4{
+    width: max-content;
+}
+
+.signup-form1 p,
+.signup-form2 p,
+.signup-form3 p,
+.signup-form4 p{
+    color: var(--primary-font);
+    font-size: 16px;
+    font-weight: 450;
+
+    margin-bottom: 4px;
+    padding-left: 8px;
+}
+
+.user-info{ 
+    height: 35px;
+
+    color: rgb(98, 98, 98);
+    font-size: 14px;
+
+    outline: none;
+    border: none;
+    border-radius: 8px;
+
+    padding: 0px 8px;
+    margin-bottom: 20px;
+}
+
+.general-info-container,
+.contact-info-container,
+.medical-info-container,
+.insurance-info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.general-info,
+.contact-info,
+.medical-info,
+.insurance-info{
+    width: 225px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin-bottom: 3px;
+    padding: 0px 15px;
+}
+
+.general-info{
+    width: 160px;
+
+    margin: 0;
+    padding: 0;
+    margin-top: 9px;
+}
+
+.medical-info{
+    width: 180px;
+}
+
+
+/* php related class */
+.input-warning{
+    height: 15px;   
+    color: rgb(211, 24, 24);
+    font-size: 12px;  
+    font-weight: 420;
+
+    margin-top: -15px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+} 
+
+
+.signup-button{ 
+    color: white;
+    font-size: 18px;
+    font-weight: 550;
+
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 50px;
+
+    box-shadow: 7px 7px 9px rgba(0, 0, 0, 0.248);
+    transition: background-color 0.3s;
+
+    padding: 12px 25px;
+}
+
+.signup-button:hover{
+    background-color: var(--button-hover);
+    cursor: pointer;
+} 
+
+
+/*_______________________________________________________________________________________*/
+/*_______________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 576px){
+    .patient-signup-container {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 0 15px; /* Add padding to prevent content from touching edges */
+    }
+
+    .popup {
+        font-size: 12px;
+        padding: 8px 15px;
+        top: 75px;
+    }
+
+    .user-type-message {
+        font-size: 12px;
+        text-align: center;
+
+        padding: 0px 7px;
+    }
+
+    .user-type-message p {
+        font-size: 12px;
+    }
+
+    .signup-forms {
+        width: 100%;
+        align-items: center;
+    }
+
+    .signup-form1,
+    .signup-form2,
+    .signup-form3,
+    .signup-form4 {
+        width: 90%; /* Make forms responsive */
+        max-width: 340px;
+        padding: 15px;
+        margin-bottom: 45px;
+    }
+
+    .signup-form2,
+    .signup-form3,
+    .signup-form4 {
+        width: 95%; /* Make these forms adjust properly */
+    }
+
+    .user-info {
+        height: 32px;
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    .general-info-container,
+    .contact-info-container,
+    .medical-info-container,
+    .insurance-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .general-info,
+    .contact-info,
+    .medical-info,
+    .insurance-info {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .signup-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
+

@@ -1,0 +1,452 @@
+.search-divs-container{
+    width: 100%;
+
+    z-index: 0;
+
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 60px;
+    margin-bottom: 70px;
+} 
+
+.search-section-hospital,
+.search-section-user,
+.search-section-doctor{
+    width: 100%; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    margin-bottom: 115px;
+}
+
+.search-user-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 19px;
+}
+
+.search-hospital-header,
+.search-doctor-header{
+    width: 75%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.search-doctor-header{
+    width: 750px;
+
+    margin-top: 20px;
+}
+
+.search-header-title{
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(0, 122, 0);
+}
+
+.search-bar1,
+.search-bar3{
+    width: 330px;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-bar2{
+    width: 45%; 
+    min-width: 185px; 
+
+    display: flex;
+    align-items: center; 
+}
+
+.search-bar1 input,
+.search-bar2 input,
+.search-bar3 input{
+    width: 85%;
+    height: 45px;
+
+    color: black;
+    font-size: 16px;
+
+    outline: none;
+    border: 1px solid darkgrey;
+    border-right: none;
+    border-top-left-radius: 14px;
+
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.083);
+
+    padding: 0px 8px;
+}
+
+.search-bar-button{
+    height: 45px;
+    min-width: 15%;
+
+    background-color: var(--button-color);
+    border: none;
+    border-bottom-right-radius: 14px;
+
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.083);
+
+    padding: 0px 8px;
+}
+
+.search-bar-button svg{
+    width: 24px;
+}
+
+.search-bar-button:hover{
+    cursor: pointer;
+    background-color: var(--button-hover);
+}
+
+/*________________________________________________________________________*/
+/* profile pic, profile name of searched users*/
+
+.searched-profile{
+    display: flex;
+    align-items: center;
+}
+
+.searched-profile-pic img{ 
+    width: 35px;
+    height: 35px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: solid 1px darkgrey;
+
+    margin-right: 7px;
+}
+
+.searched-profile-name{
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+}
+
+/*________________________________________________________________________*/
+
+.search-hospital-table{
+    width: 950px;
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+} 
+
+.search-user-table{
+    width: 350px;
+
+    text-align: left;
+
+    margin-top: 37px;
+}
+
+.search-doctor-table{
+    width: 800px;
+    
+    text-align: left;
+}
+
+thead tr{ 
+    background-color: rgb(199, 255, 199);
+}
+
+th{ 
+    color: rgb(0, 153, 0);
+    font-weight: 550;
+    font-size: 18px; 
+
+    padding: 0px 6px;
+}
+
+tr{
+    height: 42px; 
+
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+} 
+
+tr:hover{
+    border-color: var(--button-color); 
+} 
+
+
+td{
+    color: black;      
+    font-size: 16px;  
+    font-weight: 400;
+
+    padding: 0px 4px;
+}  
+
+/*_______________________________________________________________*/
+/* User table */
+.search-user-table tr th:nth-child(1){ /* Name */
+    width: 85%;
+}
+
+.search-user-table tr th:nth-child(2){  /* profile */
+    width: 15%;
+    max-width: 15%;
+      
+    background-color: rgb(179, 248, 231);     
+    min-width: 0;
+    min-height: 0;
+}
+
+/*_______________________________________________________________*/
+/* Doctor table */
+.search-doctor-table tr th:nth-child(1){ /* Name */
+    width: 30%;
+}
+
+.search-doctor-table tr th:nth-child(2){  /* Hospital */
+    width: 55%;
+    max-width: 55%;
+      
+    background-color: rgb(183, 253, 253);
+}
+
+.search-doctor-table tr th:nth-child(3){  /* profile */
+    width: 15%;
+    max-width: 15%;
+          
+    min-width: 0;
+    min-height: 0;
+}
+
+/*_______________________________________________________________*/
+/* Hospital table */
+.search-hospital-table tr th:nth-child(1){ /* Name */
+    width: 37%;
+}
+
+.search-hospital-table tr th:nth-child(2){  /* Location */
+    width: 50%;
+    max-width: 50%;
+      
+    background-color: rgb(211, 251, 251);     
+    min-width: 0;
+    min-height: 0;
+}
+
+.search-hospital-table tr th:nth-child(3){  /* profile */
+    width: 13%;
+    max-width: 13%;
+}
+
+/*_______________________________________________________________*/
+
+.search-hospital-table tr td:nth-child(1) p,
+.search-user-table tr td:nth-child(1) p {  
+    font-weight: 500;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.search-hospital-table tr td:nth-child(2) p,
+.search-doctor-table tr td:nth-child(2) p {    
+    color: var(--secondary-font);
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+} 
+
+table tr td:nth-child(4){
+    color: var(--third-font);
+    font-size: 14px;
+}
+
+table tr:nth-child(even){
+    background-color: rgb(215, 245, 238);
+} 
+
+
+table tr td:nth-child(5) form{  /* Action buttons */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.hospital-profile{
+    width: min-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    
+    border: none;
+    border-radius: 6px;
+
+    transition: background-color 0.3s;
+
+    padding: 5px 8px; 
+    margin: 0px 3px;
+}
+
+.hospital-profile svg{
+    width: 15px;
+
+    margin-left: 4px; 
+} 
+
+table tr:nth-child(odd) button{
+    background-color: rgb(12, 164, 123);
+}
+
+table tr:nth-child(even) button{
+    background-color: rgb(12, 146, 164);
+}
+
+.hospital-profile:hover{
+    cursor: pointer;
+    background-color: var(--button-color);
+}
+
+
+/* php related class */
+.search-message{
+    color: rgb(124, 124, 124);
+    font-size: 22px;
+    font-weight: 500;
+
+    margin-top: 5px;
+}
+
+
+/*_______________________________________________________________________________________*/
+/*_______________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 660px) {
+    .search-divs-container {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+
+    .search-section-hospital,
+    .search-section-user,
+    .search-section-doctor {
+        margin-bottom: 60px;
+    }
+
+    .search-user-header {
+        row-gap: 12px;
+        text-align: center;
+    }
+
+    .search-hospital-header,
+    .search-doctor-header {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .search-header-title {
+        font-size: 18px;
+    }
+    .search-header-title span{
+        font-size: 18px;
+    }
+
+    .search-bar1,
+    .search-bar2,
+    .search-bar3 {
+        width: 100%;
+        justify-content: center;
+
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.016);
+    }
+
+    .search-bar1 input,
+    .search-bar2 input,
+    .search-bar3 input {
+        width: 92%;
+        height: 35px;
+
+        font-size: 13px;
+    }
+
+    .search-bar-button {
+        height: 35px;
+        min-width: 8%;
+
+        padding: 0 6px;
+    }
+
+    .search-bar-button svg {
+        width: 15px;
+    }
+
+    /* Table scroll wrappers */
+    .search-hospital-table-wrapper,
+    .search-user-table-wrapper,
+    .search-doctor-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .search-hospital-table {
+        width: 500px;
+    }
+
+    .search-user-table {
+        width: 280px;
+    }
+
+    .search-doctor-table {
+        width: 400px;
+    }
+
+    th {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    td {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .search-message {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .hospital-profile {
+        font-size: 13px;
+        padding: 5px 6px;
+    }
+
+    .hospital-profile svg {
+        width: 13px;
+    }
+}

@@ -1,0 +1,666 @@
+.patient-account-container{
+    width: 100%;
+
+    z-index: 0;
+
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 40px;
+    margin-bottom: 50px;
+} 
+
+.search-details-header2{
+    width: 1100px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.search-header-title2{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--primary-font);
+}
+
+.search-bar-account{
+    width: 330px;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-account input{
+    width: 85%;
+    height: 45px;
+
+    color: black;
+    font-size: 16px;
+
+    outline: none;
+    border: 1px solid darkgrey;
+    border-right: none;
+    border-top-left-radius: 14px;
+
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.083);
+
+    padding: 0px 8px;
+}
+
+.search-bar-button2{
+    height: 45px;
+    min-width: 15%;
+
+    background-color: rgb(19, 143, 214);
+    border: none;
+    border-bottom-right-radius: 14px;
+
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.083);
+
+    padding: 0px 8px;
+}
+
+.search-bar-button2 svg{
+    width: 24px;
+}
+
+.search-bar-button2:hover{
+    cursor: pointer;
+    background-color: var(--primary-font);
+}
+
+
+.sdh-buttons{
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+
+    border: 0.2px solid var(--primary-font);
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.sdh-buttons button{
+    width:max-content;
+
+    font-size: 13px;
+    color: var(--primary-font);
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+    border-right: 0.2px solid var(--primary-font); 
+    border-bottom-right-radius: 8px;
+
+    padding: 0px 7px;
+}
+
+.sdh-buttons button:hover{
+    cursor: pointer;
+    background-color: rgba(232, 242, 255, 0.986);
+    border-color: var(--secondary-font);
+}
+
+/*______________________________________________________________________________*/
+
+.account-user-info{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+/*_________________________________________________________________*/
+/* table */
+
+.user-appointment-table{
+    width: 1050px; 
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+}
+
+.user-appointment-table tr th:nth-child(1){ /* doctor */
+    width: 20%;
+
+    background-color:rgb(183, 215, 248);
+    color: var(--primary-font);
+}
+
+.user-appointment-table tr th:nth-child(2){  /* hospital */
+    width: 28%;
+    max-width: 28%;
+      
+    background-color:rgb(192, 236, 254);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.user-appointment-table tr th:nth-child(3){  /* department */
+    width: 15%;
+    max-width: 15%;
+
+    background-color:rgb(183, 215, 248);
+    color: var(--primary-font);
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.user-appointment-table tr th:nth-child(4){  /* Visit date */
+    width: 12%;
+    max-width: 12%;
+
+    background-color:rgb(192, 236, 254);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.user-appointment-table tr th:nth-child(5){  /* day-hour */
+    width: 15%;
+    max-width: 15%;
+
+    background-color:rgb(183, 215, 248);
+    color: var(--primary-font); 
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.user-appointment-table tr th:nth-child(6){  /* status */
+    width: 10%;
+    max-width: 10%;
+
+    background-color:rgb(192, 236, 254);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.user-appointment-table tr td:nth-child(1) p,
+.user-appointment-table tr td:nth-child(2) p,
+.user-appointment-table tr td:nth-child(3) p{  
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.user-appointment-table tr:nth-child(even) button,
+.user-appointment-table tr:nth-child(odd) button{
+    background-color: transparent;
+}
+
+.user-appointment-table tr:nth-child(even) button svg,
+.user-appointment-table tr:nth-child(odd) button svg{
+    margin-left: 5px;
+}
+
+.user-appointment-table tr:nth-child(even) button:hover,
+.user-appointment-table tr:nth-child(odd) button:hover{
+    cursor: pointer;
+    background-color:  rgb(216, 235, 249);
+}
+
+
+
+/*_________________________________________________________________*/
+/* table */
+
+.medication-table{
+    width: 1050px; 
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+}
+
+.medication-table tr th:nth-child(1){ /* medicine */
+    width: 20%;
+
+    background-color: rgb(175, 255, 168);
+    color: var(--primary-font);
+}
+
+.medication-table tr th:nth-child(2){  /* disease */
+    width: 20%;
+    max-width: 20%;
+      
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.medication-table tr th:nth-child(3){  /* doctor */
+    width: 25%;
+    max-width: 25%;
+
+    background-color: rgb(175, 255, 168);
+    color: var(--primary-font);
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.medication-table tr th:nth-child(4){  /* Visit date */
+    width: 13%;
+    max-width: 13%;
+ 
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.medication-table tr th:nth-child(5){  /* day-hour */
+    width: 12%;
+    max-width: 12%;
+
+    background-color: rgb(175, 255, 168);
+    color: var(--primary-font); 
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.medication-table tr th:nth-child(6){  /* status */
+    width: 10%;
+    max-width: 10%;
+
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.medication-table tr td:nth-child(1) p,
+.medication-table tr td:nth-child(2) p,
+.medication-table tr td:nth-child(3) p{  
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.medication-table tr:nth-child(even){
+    background-color: rgb(213, 255, 215);
+}
+
+.medication-table tr:nth-child(even) button,
+.medication-table tr:nth-child(odd) button{
+    background-color: transparent;
+}
+
+.medication-table tr:nth-child(even) button svg,
+.medication-table tr:nth-child(odd) button svg{
+    margin-left: 5px;
+}
+
+.medication-table tr:nth-child(even) button:hover,
+.medication-table tr:nth-child(odd) button:hover{
+    cursor: pointer;
+    background-color:  rgb(216, 235, 249);
+}
+
+
+
+
+/*______________________________________________________________________________*/
+/* upload / download files divs*/
+
+.upload-download-files{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 45px;
+}
+
+.file-sort-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    border: 1px solid darkgreen;
+    border-right: none;
+
+    margin-top: 10px;
+}
+
+.file-sort-buttons button{
+    width: 75px;
+
+    font-size: 12px;
+    color: darkgreen;
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+    border-right: 1px solid darkgreen;
+
+    padding: 6px 0px;
+}
+
+.file-sort-buttons button:hover{
+    background-color: rgb(199, 255, 199);
+}
+
+.upload-files,
+.download-files{
+    display: flex;  
+    flex-direction: column;
+}
+
+.upload-files{
+    width: 300px;
+
+    border-left: 1px solid var(--secondary-font);
+
+    padding: 15px 0px;
+    padding-left: 20px;
+}
+
+.upload-files p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.upload-files input{
+    margin-top: 14px;
+}
+
+
+/* download table */ 
+
+.download-file-table{
+    width: 500px;
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+
+    margin: 0px 15px;
+}
+
+.download-file-table tr th:nth-child(1){ /* file name */
+    width: 58%;
+
+    background-color: rgb(175, 255, 168);
+    color: var(--primary-font);
+}
+
+.download-file-table tr th:nth-child(2){  /* date */
+    width: 19%;
+    max-width: 19%;
+      
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.download-file-table tr th:nth-child(3){  /* view */
+    width: 23%;
+    max-width: 23%;
+
+    background-color: rgb(175, 255, 168);
+    color: var(--primary-font);
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.download-file-table tr:nth-child(even){
+    background-color: rgb(213, 255, 215);
+}
+
+.download-file-table tr td:nth-child(1) p{  
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.file-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.download-file-table tr:nth-child(even) button,
+.download-file-table tr:nth-child(odd) button{
+    font-size: 15px;
+    color: rgb(157, 3, 3);
+
+    outline: none;
+    border: 0.5px solid transparent;
+
+    background-color: transparent;
+
+    padding: 4px 4px;
+}
+
+.download-file-table tr:nth-child(even) button:hover,
+.download-file-table tr:nth-child(odd) button:hover{
+    cursor: pointer;
+    color: rgb(242, 13, 13);
+
+    border-color: rgb(242, 13, 13);
+}
+
+
+/*______________________________________________________________________________*/
+/* logout */
+
+.logout-div{
+    margin: 40px 0px;
+}
+
+.logout-div button{
+    width: 200px;
+    height: min-content;
+
+    font-size: 18px;
+    font-weight: 550;
+    color: white;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: rgb(21, 195, 21);
+
+    transition: background-color 0.3s;
+
+    padding: 10px 15px;
+}
+
+.logout-div button:hover{
+    cursor:pointer;
+    background-color: rgb(15, 222, 15);
+    border-color: darkgreen;
+}
+
+/*_______________________________________________________________________________________*/
+/*_______________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 660px) {
+    .patient-account-container {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .search-details-header2 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .search-header-title2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .search-header-title2 span{
+        font-size: 18px;
+    }
+
+    .search-bar-account {
+        width: 94%;
+        justify-content: center;
+
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.016);
+    }
+
+    .search-bar-account input {
+        width: 92%;
+        height: 35px;
+
+        font-size: 13px;
+    }
+
+    .search-bar-button2,
+    .search-bar-button {
+        min-width: 8%;
+        height: 35px;
+
+        padding: 0 6px;
+    }
+
+    .search-bar-button2 svg,
+    .search-bar-button svg{
+        width: 15px;
+    }
+
+    .sdh-buttons {
+        height: 30px;
+
+        margin-top: 7px;
+    }
+
+    .sdh-buttons button {
+        font-size: 11px;
+    }
+
+    .account-user-info {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* Make tables scrollable */
+    .user-appointment-table,
+    .medication-table {
+        width: 800px; /* fixed width to enable scroll */
+    }
+
+    .user-appointment-table-wrapper,
+    .medication-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }   
+
+    .user-appointment-table tr th,
+    .medication-table tr th,
+    .download-file-table tr th {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .file-sort-buttons{
+        margin-top: 10px;
+    }
+
+    .file-sort-buttons button{
+        width: 55px;
+
+        font-size: 11px;
+    }
+
+    .upload-download-files { 
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .upload-files{ 
+        width: 100%;
+        max-width: 100%;
+
+        border: none;
+        border-top: 0.5px solid rgb(179, 178, 178);
+        border-bottom: 0.5px solid rgb(179, 178, 178);
+
+        margin: 0;
+        margin-top: 50px;
+        padding: 10px 0;
+    }
+
+    .download-files {
+        width: 100%;
+        overflow-x: auto;
+
+        border: 0;
+
+        margin: 0;
+        padding: 0 ;
+    }
+
+    .download-file-table-wrapper{
+        width:  100%;
+        overflow-x: auto;
+    }
+
+    .download-file-table{
+        width: 400px;
+
+        margin: 0;
+    }
+
+    .download-file-table tr th:nth-child(1){ /* file name */
+        width: 49%;
+    }
+
+    .download-file-table tr th:nth-child(2){ /* date */
+        width: 23%;
+        max-width: 23%;
+    }
+
+    .download-file-table tr th:nth-child(3){ /* options*/
+        width: 28%;
+        max-width: 28%;
+    }
+
+
+    .logout-div button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+
+

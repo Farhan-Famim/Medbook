@@ -1,0 +1,72 @@
+.pharmacy-account-container{
+    width: 100%;
+
+    z-index: 0;
+
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.pharmacy-uid{
+    font-display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    margin-bottom: 50px;
+}
+
+.p-uid-1{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(46, 173, 32);
+}
+
+.p-uid-2{
+    font-size: 22px;
+    font-weight: 550;
+    color: rgb(1, 68, 1);
+
+    padding: 2px 0px;
+}
+
+
+/*_______________________________________________________________________________________*/
+/*_______________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 660px) {
+    .pharmacy-account-container {
+        width: 100%;
+        padding: 0 12px;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .pharmacy-uid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .p-uid-1 {
+        font-size: 14px;
+        text-align: center;
+        color: rgb(46, 173, 32);
+    }
+
+    .p-uid-2 {
+        font-size: 18px;
+        padding: 2px 0;
+        color: rgb(1, 68, 1);
+    }
+}

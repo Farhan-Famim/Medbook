@@ -1,0 +1,245 @@
+.hospital-account-container{
+    width: 100%;
+
+    z-index: 0;
+
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+.account-hospital-info{
+    width: 1130px;  
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+/*_________________________________________________________________*/
+/* table */
+
+.hospital-account-table{
+    width: 1180px; 
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+}
+
+.hospital-account-table tr th:nth-child(1){ /* User */
+    width: 18%;
+
+    background-color:rgb(192, 236, 254);
+    color: var(--primary-font);
+}
+
+.hospital-account-table tr th:nth-child(2){  /* Contact no. */
+    width: 13%;
+    max-width: 13%;
+
+    background-color:rgb(183, 215, 248);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.hospital-account-table tr th:nth-child(3){  /* Doctor */
+    width: 18%;
+    max-width: 18%;
+      
+    background-color:rgb(192, 236, 254);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.hospital-account-table tr th:nth-child(4){  /* dept */
+    width: 13%;
+    max-width: 13%;
+
+    background-color:rgb(183, 215, 248);
+    color: var(--primary-font);
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.hospital-account-table tr th:nth-child(5){  /* Visit date */
+    width: 11%;
+    max-width: 11%;
+
+    background-color:rgb(192, 236, 254);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.hospital-account-table tr th:nth-child(6){  /* day-hour */
+    width: 13%;
+    max-width: 13%;
+
+    background-color:rgb(183, 215, 248);
+    color: var(--primary-font); 
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.hospital-account-table tr th:nth-child(7){  /* Action */
+    width: 14%;
+    max-width: 14%;
+
+    background-color:rgb(192, 236, 254);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.hospital-account-table tr td:nth-child(1) p,
+.hospital-account-table tr td:nth-child(3) p,
+.hospital-account-table tr td:nth-child(4) p{  
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.accept-reject-div{ /*button containing div */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.accept-request-button,
+.reject-request-button{
+    width: min-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(3, 105, 3);
+    
+    border: 1px solid rgb(3, 105, 3);
+    border-radius: 6px;
+
+    transition: background-color 0.3s;
+
+    padding: 5px 5px; 
+    margin: 0px 4px;
+}
+
+.reject-request-button{
+    color: rgb(220, 9, 9);
+
+    border-color: rgb(220, 9, 9);
+}
+
+.reject-request-button:hover{
+    background-color:  rgb(237, 178, 176);
+}
+
+.accept-request-button svg{
+    width: 14px;
+
+    margin-left: 3px; 
+}
+
+.reject-request-button svg{
+    width: 16px;
+
+    margin-left: 3px;
+}
+
+.hospital-account-table tr:nth-child(even) button,
+.hospital-account-table tr:nth-child(odd) button{
+    background-color: transparent;
+}
+
+.hospital-account-table tr:nth-child(even) button:hover,
+.hospital-account-table tr:nth-child(odd) button:hover{
+    cursor: pointer;
+    background-color:  rgb(176, 211, 237);
+}
+
+
+/*_______________________________________________________________________________________*/
+/*_______________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 660px) {
+    .hospital-account-container {
+        width: 100%;
+        padding: 0;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .account-hospital-info {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+    }
+
+    /* Scrollable hospital account table */
+    .hospital-account-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .hospital-account-table {
+        width: 1000px;
+        min-width: 700px;
+        border-collapse: collapse;
+    }
+
+    .hospital-account-table th,
+    .hospital-account-table td {
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 6px 8px;
+    }
+
+    .hospital-account-table tr td:nth-child(1) p,
+    .hospital-account-table tr td:nth-child(3) p,
+    .hospital-account-table tr td:nth-child(4) p {
+        font-size: 14px;
+    }
+
+    .accept-reject-div {
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+    }
+
+    .accept-request-button,
+    .reject-request-button {
+        font-size: 13px;
+        padding: 5px 6px;
+        width: auto;
+    }
+
+    .accept-request-button svg,
+    .reject-request-button svg {
+        width: 12px;
+        margin-left: 3px;
+    }
+}

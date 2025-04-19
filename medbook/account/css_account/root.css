@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --primary-background: rgba(180, 247, 253, 0.594);
+    --secondary-background:rgb(184, 220, 235);
+
+    --primary-font: rgb(12, 0, 80);
+    --secondary-font: rgb(30, 0, 165);
+    --third-font: rgb(0, 152, 18);
+
+    --button-color: rgb(4, 189, 26);
+    --button-hover: rgb(24, 167, 41);
+}
+
+html{
+    height: 100%; /*to keep the footer at the bottom */
+}
+
+body{ 
+    height: 100%; /* to keep the footer at the bottom */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: whitesmoke;
+    cursor: default;
+    
+    margin-top: 90px;  /* height of the nav-bar */
+
+    /*
+    background-image: url('./../../images/loginBG.jpg'); 
+    background-repeat:repeat;
+    background-position: center;
+    background-size: cover;
+    */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family:  "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-font)
+}
+
+/*_________________________________________________________________________*/
+/*_________________________________________________________________________*/
+@media only screen and (min-width: 200px) and (max-width: 660px){
+    body {
+        background-color: white;
+        
+        margin-top: 85px; /* height of the navbar */
+        padding: 0 10px; /* Add padding to prevent content from touching edges */
+    }
+
+    html, body {
+        height: 100%; /* Ensure content fits properly */
+    }
+
+    * {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}

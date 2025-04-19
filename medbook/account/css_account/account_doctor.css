@@ -1,0 +1,167 @@
+.search-header-doc-title2{
+    font-size: 30px;
+    font-weight: 500;
+    color:rgb(255, 111, 174);/* rgb(253, 83, 137);  */
+}
+
+.search-bar-button3{
+    height: 45px;
+    min-width: 15%;
+
+    background-color: rgb(252, 166, 179);
+    border: none;
+    border-bottom-right-radius: 14px;
+
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.083);
+
+    padding: 0px 8px;
+}
+
+.search-bar-button3 svg{
+    width: 24px;
+}
+
+.search-bar-button3:hover{
+    cursor: pointer;
+    background-color:  rgb(245, 150, 164);
+}
+
+/*__________________________________________________________________________________*/
+/* table */
+
+.doctor-appointment-table{
+    width: 1000px; 
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+}
+
+.doctor-appointment-table tr th:nth-child(1){ /* patient */
+    width: 22%;
+
+    background-color: rgb(253, 217, 217);
+    color: var(--primary-font);
+}
+
+.doctor-appointment-table tr th:nth-child(2){  /* hospital */
+    width: 28%;
+    max-width: 28%;
+      
+    background-color: rgb(253, 230, 234); 
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.doctor-appointment-table tr th:nth-child(3){  /* visit date */
+    width: 15%;
+    max-width: 15%;
+
+    background-color: rgb(253, 217, 217);
+    color: var(--primary-font);
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.doctor-appointment-table tr th:nth-child(4){  /* day & hours */
+    width: 17%;
+    max-width: 17%;
+
+    background-color:rgb(253, 230, 234);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.doctor-appointment-table tr th:nth-child(5){  /* Action */
+    width: 18%;
+    max-width: 18%;
+
+    background-color: rgb(253, 217, 217);
+    color: var(--primary-font); 
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.doctor-appointment-table tr td:nth-child(1) p,
+.doctor-appointment-table tr td:nth-child(2) p,
+.doctor-appointment-table tr td:nth-child(3) p{  
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.doctor-appointment-table tr:nth-child(even) button,
+.doctor-appointment-table tr:nth-child(odd) button{
+    background-color: transparent;
+}
+
+.doctor-appointment-table tr:nth-child(even) button:hover,
+.doctor-appointment-table tr:nth-child(odd) button:hover{
+    cursor: pointer;
+    background-color:  rgb(176, 211, 237);
+}
+
+/* __________________________________________________________________________________*/
+/* _____________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 660px) {
+    .search-header-doc-title2 {
+        font-size: 18px;
+        text-align: center;
+
+        margin-bottom: 0px;
+    }
+    .search-header-doc-title2 span{
+        font-size: 18px;
+    }
+
+    .search-bar-button3 {
+        height: 35px;
+        min-width: 35px;
+        padding: 0px 6px;
+    }
+
+    .search-bar-button3 svg {
+        width: 18px;
+    }
+
+    /* Make doctor appointment table scrollable */
+    .doctor-appointment-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .doctor-appointment-table {
+        width: 700px; /* wider than screen to enable scrolling */
+        min-width: 700px;
+        border-collapse: collapse;
+    }
+
+    .doctor-appointment-table th,
+    .doctor-appointment-table td {
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 6px 8px;
+    }
+
+    .doctor-appointment-table tr td:nth-child(1) p,
+    .doctor-appointment-table tr td:nth-child(2) p,
+    .doctor-appointment-table tr td:nth-child(3) p {
+        font-size: 14px;
+    }
+
+    .doctor-appointment-table tr:nth-child(even) button,
+    .doctor-appointment-table tr:nth-child(odd) button {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+}

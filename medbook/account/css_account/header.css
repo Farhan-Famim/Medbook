@@ -1,0 +1,340 @@
+.nav-bar-container-1{ 
+    height: 35px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-image: linear-gradient(45deg, rgb(185, 210, 237), rgb(195, 249, 244));
+    border-bottom: 1px solid var(--primary-font);
+
+    padding: 15px 15px; 
+}
+
+.nav-bar-container-2{
+    display: none;
+}
+
+.nav-bar-profile{
+    display: flex;
+    align-items: center;
+
+    margin-left: 15px;
+}
+
+.navBar-profile-pic img{
+    width: 35px;
+    height: 35px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: solid 1.5px var(--secondary-font);
+
+    transition: border-color 0.5s;
+
+    margin-right: 7px;
+}
+
+.navBar-profile-pic img:hover{
+    border-color: rgb(3, 192, 0);
+}
+
+.navBar-profile-name{
+    font-size: 20px;
+    color: var(--secondary-font);
+    font-weight: 550;
+}
+
+.nav-bar-logo{
+    display: flex;
+    align-items: center;
+
+    color: var(--primary-font);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.nav-bar-logo img{
+    width: 45px;
+}
+
+.nav-bar-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.navBar-button{
+    font-size: 17px;
+    font-weight: 500;
+
+    background-color: transparent;
+    border: none;
+
+    margin-right: 9px;
+}
+
+.navBar-button:hover{
+    color:  rgb(41, 0, 220);
+    cursor: pointer;
+}
+
+
+.navBar-search{
+    width: min-content;
+    height: min-content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: grey;
+    font-size: 15px;
+
+    border: 0.5px solid grey;
+    border-radius: 20px;
+
+    background-color: rgb(248, 245, 245);
+
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.101);
+
+    transition: background-color 0.3s;
+
+    padding: 8px 8px;
+    margin-left: 6px;
+}
+.navBar-search svg{
+    width: 15px;
+
+    padding-left: 18px;
+}
+.navBar-search:hover{
+    cursor: pointer;
+
+    background-color: rgb(242, 237, 237);
+}
+
+
+/*______________Side bar_______________*/
+.side-bar-container{
+    display: none;
+}
+
+
+
+/*_______________________________________________________________________________________*/
+/*_______________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 660px){
+    .nav-bar-container-1{ 
+        display: none;
+    }
+
+    .nav-bar-container-2 { 
+        height: 85px;  /* padding-top + actual height = 35px + 50px */
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+
+        background-image: linear-gradient(45deg, rgb(185, 210, 237), rgb(195, 249, 244));
+        border-bottom: 1px solid var(--primary-font);
+
+        padding: 0;
+        padding-top: 35px;
+        margin: 0;
+    }
+    .nav-bar-container-2 > * {
+        min-width: 0;
+        flex-shrink: 1;
+    }
+
+    .navBar-burger{
+        width: min-content;
+        height: min-content;
+    
+        background-color: transparent;
+
+        border: none;
+        outline: none; 
+
+        margin-left: 14px;
+    }
+
+    .navBar-burger svg{
+        width: 25px; 
+    }
+
+    
+    .nav-bar-logo{  
+        font-size: 16px;
+        font-weight: 550;
+    
+        margin-left: 2px;
+        padding-top: 2px;
+    }
+
+    .nav-bar-logo img{
+        width: 28px;
+
+        padding-bottom: 3px;
+        padding-right: 2px;
+    }
+
+
+    .navBar-search-2{
+        width: min-content;
+        height: min-content;
+    
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        margin-right: 14px;
+    }
+
+    .navBar-search-2 svg{
+        width: 20px;
+    }
+
+
+    /*_____________ Side bar ______________*/
+
+    .side-bar-container{
+        display: flex;
+    }
+
+    .side-bar {
+        z-index: 999;
+
+        height: 85vh;
+        width: 170px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        background-color: rgba(255, 255, 255, 0.66);
+        backdrop-filter: blur(10px);
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+
+        display: none;
+        flex-direction: column;
+
+        padding: 20px; 
+        padding-top: 35px;
+    }
+
+    /* Close button */
+    .sidebar-close-button {  
+        height: min-content;
+        width: min-content;
+
+        background: none;  
+        border: none;
+        align-self: flex-end; 
+
+        margin-right: -9px;
+        margin-top: -3px;
+    }
+
+    .sidebar-close-button svg{
+        width: 20px;
+
+        padding: 7px;
+    }
+
+    /* Profile section */
+    .side-bar-profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+
+        margin-bottom: 27px;
+        margin-left: 0px;
+    }
+
+    .sideBar-profile-pic img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #00ffa6;
+        
+        margin-right: 10px;
+    }
+
+    .sideBar-profile-name {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Navigation buttons */
+    .sideBar-button {
+        width: 100%;
+        background: transparent;
+        color: #333;
+
+        border: none;
+        border-bottom: 0.3px solid rgb(196, 196, 196);
+        
+        text-align: left;
+        font-size: 1rem;
+
+        transition: grey 0.2s ease;
+
+        padding: 12px 0;
+    }
+
+    /* Logout button at the bottom */
+    .sidebar-logout-button {
+        width: 100%;
+
+        background-color: #e34c5b;
+
+        color: white;
+        font-size: 15px;
+        font-weight: 450;
+        
+        border: none;
+        border-radius: 6px;
+        
+        align-items: center;
+        text-align: center;
+
+        margin-top: auto;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .sidebar-logout-button svg{
+        width: 19px; 
+
+        margin-bottom: -3px;
+    }
+
+
+
+}

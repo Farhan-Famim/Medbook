@@ -1,0 +1,336 @@
+.hospital-details-container{
+    width: 100%;
+
+    z-index: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 60px;
+    margin-bottom: 70px;
+} 
+
+.hospital-details{
+    width: 88%;  
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    margin-bottom: 115px;
+}
+
+.search-details-header{
+    width: 1100px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+/*_________________________________________________________*/
+/* table */
+
+.dept-details-table{
+    width: 1180px;
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+}
+
+.dept-details-table tr th:nth-child(1){ /* Dept. */
+    width: 12%;
+}
+
+.dept-details-table tr th:nth-child(2){  /* Doctor */
+    width: 18%;
+    max-width: 18%;
+      
+    background-color: rgb(211, 251, 251);     
+    min-width: 0;
+    min-height: 0;
+}
+
+.dept-details-table tr th:nth-child(3){  /* Working days */
+    width: 30%;
+    max-width: 30%;
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.dept-details-table tr th:nth-child(4){  /* Visit hours */
+    width: 30%;
+    max-width: 30%;
+
+    background-color: rgb(211, 251, 251); 
+    min-width: 0;
+    min-height: 0;
+}
+
+.dept-details-table tr th:nth-child(5){  /* Action */
+    width: 10%;
+    max-width: 10%;
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.dept-details-table tr td:nth-child(1) p,
+.dept-details-table tr td:nth-child(2) p,
+.dept-details-table tr td:nth-child(3) p,
+.dept-details-table tr td:nth-child(4) p {  
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.remove-dept-details{
+    width: min-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 550;
+    color: rgb(240, 37, 37);
+    
+    border: 1px solid red;
+    border-radius: 6px;
+
+    transition: background-color 0.3s;
+
+    padding: 5px 8px; 
+    margin: 0px 3px;
+}
+
+.remove-dept-details svg{
+    width: 16px;
+
+    margin-right: 4px; 
+} 
+
+.remove-dept-details:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.dept-details-table tr:nth-child(even) button,
+.dept-details-table tr:nth-child(odd) button{
+    background-color: transparent;
+}
+
+.dept-details-table tr:nth-child(even) button:hover,
+.dept-details-table tr:nth-child(odd) button:hover{
+    background-color: rgb(248, 91, 91);
+}
+
+/*____________________________________________________________________________________________*/
+/* Add dept schedule form */
+
+.add-dept-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.add-dept-form{
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    background-color: rgba(148, 242, 191, 0.354);;
+    box-shadow: 9px 9px 11px rgba(0, 0, 0, 0.181);
+
+    border: 1px solid var(--primary-font);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    padding: 20px 20px; 
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.add-dept-form p{
+    color: rgb(4, 65, 4);
+    font-size: 16px;
+    font-weight: 450;
+
+    margin-bottom: 4px;
+    padding-left: 8px;
+}
+
+.user-info{ 
+    height: 35px;
+
+    color: rgb(98, 98, 98);
+    font-size: 14px;
+
+    outline: none;
+    border: none;
+    border-radius: 8px;
+
+    padding: 0px 8px;
+    margin-bottom: 20px;
+}
+
+.contact-info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info{
+    width: 225px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin-bottom: 3px;
+    padding: 0px 15px;
+}
+
+.update-button{
+    width: max-content;
+
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 50px;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.128);
+    transition: background-color 0.3s;
+
+    padding: 10px 18px;
+}
+
+.update-button:hover{
+    background-color: var(--button-hover);
+    cursor: pointer;
+} 
+
+
+/*__________________________________________________________________________________*/
+/*___________________________________________________________________________________*/
+
+@media only screen and (min-width: 200px) and (max-width: 660px) {
+    .hospital-details-container {
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .hospital-details {
+        width: 100%;
+        padding: 0 12px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+    }
+
+    .search-details-header {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+
+    /* Table scroll wrapper */
+    .dept-details-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .dept-details-table {
+        width: 900px;
+        min-width: 700px;
+        border-collapse: collapse;
+    }
+
+    .dept-details-table th,
+    .dept-details-table td {
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 6px 8px;
+    }
+
+    .dept-details-table tr td:nth-child(1) p,
+    .dept-details-table tr td:nth-child(2) p,
+    .dept-details-table tr td:nth-child(3) p,
+    .dept-details-table tr td:nth-child(4) p {
+        font-size: 14px;
+    }
+
+    .remove-dept-details {
+        font-size: 13px;
+        padding: 5px 6px;
+    }
+
+    .remove-dept-details svg {
+        width: 14px;
+        margin-right: 3px;
+    }
+
+    /* Add dept form responsiveness */
+    .add-dept-container {
+        margin-top: 30px;
+        padding: 0 12px;
+    }
+
+    .add-dept-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .add-dept-form p {
+        font-size: 14px;
+        padding-left: 6px;
+    }
+
+    .user-info {
+        height: 34px;
+        font-size: 14px;
+        padding: 0 6px;
+    }
+
+    .contact-info-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 0;
+    }
+
+    .update-button {
+        font-size: 14px;
+        padding: 10px 16px;
+        margin-top: 10px;
+    }
+}

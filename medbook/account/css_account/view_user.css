@@ -1,0 +1,289 @@
+.view-user-container{
+    width: 100%;
+
+    z-index: 0;            
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 70px;
+} 
+
+.banner-user-container,
+.banner-doctor-container{
+    width: 100%;  
+    max-height: 200px;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: -40px;
+}
+
+.banner-user-container{
+    background-image: url('./../../images/banner_user.jpg'); 
+    background-repeat:repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.banner-doctor-container{
+    max-height: 230px;
+    
+    background-image: url('./../../images/banner_doctor.jpg'); 
+    background-repeat:repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.banner-user,
+.banner-doctor{
+    width: 830px;  
+
+    position: relative;
+    top: 120px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-user-dp img{
+    width: 200px;
+    height: 250px;
+
+    object-fit: cover;
+    box-shadow: 9px 9px 11px rgba(0, 0, 0, 0.181);
+
+    border: 2px solid var(--primary-font);
+    border-radius: 16px;
+}
+
+.banner-user-card{
+    width: 340px; 
+
+    background-color: rgba(194, 227, 241, 0.928);
+    box-shadow: 9px 9px 11px rgba(0, 0, 0, 0.181);
+
+    border: 2px solid var(--primary-font);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    padding: 20px 0px;
+}
+
+.banner-user-card-eachOdd,
+.banner-user-card-eachEven{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 16px;
+
+    padding: 8px 15px;
+}
+
+.banner-user-card-eachOdd{
+    background-color:rgb(169, 205, 219);
+}
+
+.view-subj{
+    font-weight: 550;
+    color: var(--primary-font)
+}
+
+.view-data{
+    font-weight: 450;
+    color: var(--secondary-font);
+}
+
+
+/*___________________________________________________________________________________________*/
+/* doctor schedule table  (view_doctor.php) */
+
+.doctor-appointment-view-table{
+    width: 850px; 
+    
+    text-align: left;       
+    
+    border-collapse: collapse; 
+}
+
+.doctor-appointment-view-table tr th:nth-child(1){ /* hospital */
+    width: 35%;
+
+    background-color: rgb(253, 217, 217);
+    color: var(--primary-font);
+}
+
+.doctor-appointment-view-table tr th:nth-child(2){  /* department */
+    width: 25%;
+    max-width: 28%;
+      
+    background-color: rgb(253, 230, 234); 
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.doctor-appointment-view-table tr th:nth-child(3){  /* visit hours */
+    width: 25%;
+    max-width: 25%;
+
+    background-color: rgb(253, 217, 217);
+    color: var(--primary-font);
+
+    min-width: 0;
+    min-height: 0;
+}
+
+.doctor-appointment-view-table tr th:nth-child(4){  /* visit fee*/
+    width: 15%;
+    max-width: 15%;
+
+    background-color:rgb(253, 230, 234);
+    color: var(--primary-font);
+    min-width: 0;
+    min-height: 0;
+}
+
+.doctor-appointment-table tr td:nth-child(1) p,
+.doctor-appointment-table tr td:nth-child(2) p{  
+    font-weight: 400;
+    color: var(--primary-font);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/*_______________________________________________________________________________________*/
+/*_______________________________________________________________________________________*/
+
+
+@media only screen and (min-width: 200px) and (max-width: 660px) {
+    .view-user-container {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    .banner-user-container,
+    .banner-doctor-container {
+        height: 100px;
+        max-height: 100px;
+        width: 100vw;
+
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner-user,
+    .banner-doctor {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        top: 80px;
+        gap: 16px;
+    }
+
+    .view-user-dp{
+        position: relative;
+        top: 25%;
+    }
+
+    .view-user-dp img {
+        width: 125px;
+        height: 125px;
+
+        border: 2px solid rgb(0, 228, 87);
+        border-radius: 50%;
+        box-shadow: 12px 12px 17px rgba(0, 0, 0, 0.23);
+        object-fit: cover;
+    }
+
+    .banner-user-card {
+        width: 88vw;
+        max-width: 88vw;
+
+        position: relative;
+        top: 25%;
+
+        background-color: rgb(209, 234, 244);
+        border: 2px solid var(--primary-font);
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        padding: 15px 0;
+        margin-top: 10px; 
+    }
+
+    .banner-user-card-eachOdd,
+    .banner-user-card-eachEven {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+
+    .banner-user-card-eachOdd{
+        background-color: rgb(177, 222, 235);
+    }
+
+    .view-subj {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--secondary-font);
+    }
+
+    .view-data {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--primary-font);
+    }
+
+    .doctor-appointment-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .doctor-appointment-view-table {
+        width: 1000px;
+        min-width: 700px;
+        border-collapse: collapse;
+    }
+
+    .doctor-appointment-view-table th,
+    .doctor-appointment-view-table td {
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 6px 8px;
+    }
+
+    .send-request-button {
+        font-size: 13px;
+        padding: 5px 6px;
+    }
+
+    .send-request-button svg {
+        width: 12px;
+        margin-left: 3px;
+    }
+
+    .view-options {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+}
+
